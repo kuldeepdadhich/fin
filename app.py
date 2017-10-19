@@ -1,10 +1,8 @@
 import os
 import sys
-import tweepy
 import requests
 import numpy as np
 import json
-import os
 
 from __future__ import print_function
 from future.standard_library import install_aliases
