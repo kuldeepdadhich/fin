@@ -6,3 +6,8 @@ tweepy==3.5.0
 requests==2.18.4
 numpy==1.13.3
 json==0.18.2
+scipy
+textblob
+pyyaml
+tensorflow
+keras
