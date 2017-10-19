@@ -5,3 +5,7 @@ requests==2.18.4
 numpy==1.13.3
 scipy==0.19.1
 textblob==0.13.0
+pyyaml==3.12
+tensorflow==r1.4
+keras=2.0.8
+json==3.11.1
