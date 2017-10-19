@@ -110,10 +110,3 @@ def stock_prediction():
     }
 
     
-
-
-# We have our file so we create the neural net and get the prediction
-print stock_prediction()
-
-# We are done so we delete the csv file
-os.remove(FILE_NAME)
