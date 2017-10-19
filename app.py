@@ -49,11 +49,6 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-def processRequest(req):
-    quote=req.get("result").get("parameters").get("STOCK")
-    get_historical(quote)
-    res = stock_prediction()   
-    return res
 
 def get_historical(quote):
     # Download our file from google finance
@@ -100,11 +95,19 @@ def stock_prediction():
 
     return result
     
-     return {
-        "speech": result,
+     
+
+def processRequest(req):
+    quote=req.get("result").get("parameters").get("STOCK")
+    get_historical(quote)
+    res = stock_prediction()   
+    return {
+        "speech": res,
         "displayText": ,
         # "data": data,
         # "contextOut": [],
     }
+
+
 
     
