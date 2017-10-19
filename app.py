@@ -103,7 +103,6 @@ def processRequest(req):
     res = stock_prediction()   
     return {
         "speech": res,
-        "displayText": ,
         # "data": data,
         # "contextOut": [],
     }
