@@ -2,3 +2,5 @@ Flask==0.10.1
 future==0.16.0
 pip==9.0.1
 requests==2.18.4
+sys==0.28.1
+os==0.15.1
