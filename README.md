@@ -1,26 +1,11 @@
-# Api.ai - sample webhook implementation in Python
+# Python Flask app on Azure App Service Web
 
-This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
+This is a minimal sample app that demonstrates how to run a Python Flask application on Azure App Service Web.
 
-More info about Api.ai webhooks could be found here:
-[Api.ai Webhook](https://docs.api.ai/docs/webhook)
+This repository can directly be deployed to Azure App Service.
 
-# Deploy to:
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+For more information, please see the [Python on App Service Quickstart docs](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-get-started-python).
 
-# What does the service do?
-It's a weather information fulfillment service that uses [Yahoo! Weather API](https://developer.yahoo.com/weather/).
-The services takes the `geo-city` parameter from the action, performs geolocation for the city and requests weather information from Yahoo! Weather public API. 
+# Contributing
 
-The service packs the result in the Api.ai webhook-compatible response JSON and returns it to Api.ai.
-
-## How to make contributions?
-Please read and follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-See [LICENSE](LICENSE).
-
-## Terms
-Your use of this sample is subject to, and by using or downloading the sample files you agree to comply with, the [Google APIs Terms of Service](https://developers.google.com/terms/).
-
-This is not an official Google product
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
