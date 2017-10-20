@@ -1,8 +1,3 @@
-import sys
-
-import requests
-import numpy as np
-
 from __future__ import print_function
 from future.standard_library import install_aliases
 install_aliases()
@@ -11,8 +6,6 @@ from urllib.parse import urlparse, urlencode
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 
-import os
-import json
 
 from flask import Flask
 from flask import request
@@ -23,6 +16,12 @@ from keras.models import Sequential
 from keras.layers import Dense
 from textblob import TextBlob
 
+import sys
+
+import requests
+import numpy as np
+import os
+import json
 
 # Flask app should start in global layout
 app = Flask(__name__)
