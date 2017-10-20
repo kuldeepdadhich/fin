@@ -1,6 +1,5 @@
-import os
 import sys
-import json
+
 import requests
 import numpy as np
 
@@ -12,15 +11,12 @@ from urllib.parse import urlparse, urlencode
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 
-
+import os
+import json
 
 from flask import Flask
 from flask import request
 from flask import make_response
-
-# Flask app should start in global layout
-app = Flask(__name__)
-
 
 
 from keras.models import Sequential
@@ -28,10 +24,8 @@ from keras.layers import Dense
 from textblob import TextBlob
 
 
-
-
-# Where the csv file will live
-FILE_NAME = 'historical.csv'
+# Flask app should start in global layout
+app = Flask(__name__)
 
 
 @app.route('/webhook', methods=['POST'])
@@ -48,6 +42,10 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
+
+
+# Where the csv file will live
+FILE_NAME = 'historical.csv'
 
 
 def get_historical(quote):
@@ -100,11 +98,18 @@ def stock_prediction():
 def processRequest(req):
     quote=req.get("result").get("parameters").get("STOCK")
     get_historical(quote)
-    res = stock_prediction()   
+    rest = stock_prediction()   
+    
+    
+    print("Response:")
+    print(rest)
+    
     return {
-        "speech": res,
+        "speech": rest,
+        "displayText": rest,
         # "data": data,
         # "contextOut": [],
+         "source": "https://github.com/kuldeepdadhich/fin"
     }
 
 if __name__ == '__main__':
