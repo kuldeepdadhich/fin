@@ -1,5 +1,4 @@
 {
-  "start":"node app.js"
   "name": "API.AI webhook demonstration",
   "description": "API.AI webhook demonstration",
   "repository": "https://github.com/kuldeepdadhich/fin",
